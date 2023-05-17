@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_HelloWorld_1684319525241
+  name: Build HelloWorld
+  orgIdentifier: default
+  projectIdentifier: CI_Tutorial
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1684319392573
+        repoName: Priyanshuranjan98/HelloWorld
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
