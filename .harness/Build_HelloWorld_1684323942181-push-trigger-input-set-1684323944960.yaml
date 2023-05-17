@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_HelloWorld_1684323942181-push-trigger-input-set
+  identifier: Build_HelloWorld_1684323942181pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: test
+  pipeline:
+    identifier: Build_HelloWorld_1684323942181
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
