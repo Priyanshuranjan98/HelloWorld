@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_HelloWorld_1684319525241-pr-trigger-input-set
+  identifier: Build_HelloWorld_1684319525241prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: CI_Tutorial
+  pipeline:
+    identifier: Build_HelloWorld_1684319525241
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
